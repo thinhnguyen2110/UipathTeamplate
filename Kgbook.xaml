@@ -1,0 +1,1387 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Password" Type="InOutArgument(x:String)" />
+    <x:Property Name="LinkWeb" Type="InOutArgument(x:String)" />
+    <x:Property Name="FolderInput" Type="InOutArgument(x:String)" />
+    <x:Property Name="NameProduct" Type="InOutArgument(x:String)" />
+    <x:Property Name="ChoiceType" Type="InOutArgument(x:String)" />
+    <x:Property Name="PriceProduct" Type="InOutArgument(x:String)" />
+    <x:Property Name="Description" Type="InOutArgument(x:String)" />
+    <x:Property Name="LinhkIMGcover" Type="InOutArgument(x:String)" />
+    <x:Property Name="Email" Type="InOutArgument(x:String)" />
+    <x:Property Name="UserName" Type="InOutArgument(x:String)" />
+    <x:Property Name="StyleBook" Type="InOutArgument(x:String)" />
+    <x:Property Name="LinkEbookDOC" Type="InOutArgument(x:String)" />
+    <x:Property Name="LinkEbookPDF" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
+  <sap:VirtualizedContainerService.HintSize>1130.4,701.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="CreateEbook" sap:VirtualizedContainerService.HintSize="673.6,636.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="ui:Browser" Name="webInput" />
+      <Variable x:TypeArguments="x:String" Name="stCheck" />
+      <Variable x:TypeArguments="ui:WorkbookApplication" Name="wbInput" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtInput" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.3999999999999986</av:Point>
+        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.6 300,107.6 183.2,107.6 183.2,127.6</av:PointCollection>
+        <x:Double x:Key="Width">640</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID5</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">83.19999999999999,127.6</av:Point>
+          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">183.2,180.39999999999998 183.2,210.39999999999998 300,210.39999999999998 300,213.6</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_64">
+            <ui:MultipleAssign DisplayName="Multiple Assign // Test" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[FolderInput]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">["C:\Users\Thinh\Desktop\Upwork\Tạo Tài Khoản Web\CreateEbook\Input\kbook"]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[LinkWeb]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">["https://kgbook.com/e/member/login/"]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[UserName]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">["TestRPA"]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[Password]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">12345678</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[NameProduct]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">Test RPA</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[ChoiceType]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">E-book</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[PriceProduct]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">1000</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[Description]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">Test</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[LinhkIMGcover]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[FolderInput +"\Cover.jpg"]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[LinkEbookDOC]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[FolderInput +"\sampleEBook.docx"]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[Email]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">testrpa.thinh@gmail.com</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[StyleBook]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">推理惊悚</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[LinkEbookPDF]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[FolderInput +"\sampleEBook.pdf"]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:MultipleAssign>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">200,213.6</av:Point>
+              <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome: KGBOOK" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OutUiElement="[webInput]" ScopeGuid="4b13b30f-c616-4b58-b87f-6a55624fcd0c" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1467.2" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="style" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DeselectAfter="True" DisplayName="Type Into 'Input User Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="Simulate" Text="[UserName]" Timeout="100" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/member/login/" ContentHash="uTJnozZPHkmvxK7o8ge14Q" CvElementArea="933, 387, 264, 28" CvType="InputBox" DesignTimeRectangle="934, 388, 262, 24" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl class='tableborder' tableCol='15' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='username' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl class='tableborder' tag='TABLE' /&gt;&lt;webctrl id='username' type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="eeeddb80-a4bf-4f15-a9d1-9ef598db48a3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQoAAAAcCAYAAACZM/H7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACESURBVHhe7dQxCsMwAARBv1rfl1EKIyWGfUBm4Krr95oAQSiAJBRAOkIxxjAz+2z3hOL7AP7b3gShAF4JBZCEAkhCASShAJJQAEkogCQUQBIKIAkFkIQCSEIBJKEAklAASSiAJBRAEgogCQWQhAJIQgEkoQDSayiWdZiZre2OUAD8mvMGCkhotcyG7eEAAAAASUVORK5CYII=" InformativeScreenshot="dd517dffdb46cb6dc28674c427ac7863.png" IsResponsive="True" Reference="o0vvAy8qH0axIcJS_h2qQw/3fCi4G5rj061cj_JKC3IMA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='会员登录' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="789, 391, 52, 17" CvTextArgument="FPs:" CvType="Text" DesignTimeRectangle="787, 384, 142, 32" ElementType="Text" FullSelectorArgument="&lt;webctrl class='tableborder' tableCol='15' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl class='tableborder' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='用户名：' check:innerText='用户名：' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJIAAAAkCAYAAABi6GPmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGuSURBVHhe7ddBboMwEEBRblgJKReKuAo5Qc9A1Et0k0XWOYEbG5wUZ8ATGEwW/0mjFqmQSnzZTvX1/et+bs75nwyzdAiJMZlHSAyzZh4hAUvEdggJqxASTBASTBASTBASTBASTBASTBASTBASTKhC6o6Vqyrt1K69DDdKLq2rq8Z1w6XW9VTfn/3+fShDHVJzHi4G4cUe09fauSYX0l0I89C663Cd00eUBpvMy/+CkjYP6a3VTIgr3D8TCSvVZygSUn1SrD1+yxuF5J81f2+I7I2VDdtRhySuIOIYhBTOUc/nxK3tGXMfWW47I7RyPnhFSpybyVinEFI5ipCurj3sd0aK4nNUUaK4IiGl94qkFSlscUlsE0Ng+1KHJL08ef6HJEeYFbexe1idGOyYevvEZvIhJQffSLci+et1X83lzxkjpP3lQwqrw2sMmpDC36w87K4JKZyrOGwXkQmp35qkl5QPyf++YFtLhM8ZbZ3yENK+5kMK25q8NT1DSs5Q8cX5lSyzkmisWZFQTmZFAnQICSYICSYICSYICSYICSYICSYICSYICSZeQmKY5ePcH0EiKmwRnHk8AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DeselectAfter="True" DisplayName="Type Into 'Input Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="Simulate" Text="[Password]" Timeout="100" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/member/login/" ContentHash="zNg6_836EkKigc-bNCOfUg" CvElementArea="932, 420, 265, 27" CvType="InputBox" DesignTimeRectangle="934, 421, 262, 24" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl class='tableborder' tableCol='15' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='password' tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl class='tableborder' tag='TABLE' /&gt;&lt;webctrl id='password' type='password' tag='INPUT' class='' aaname='' /&gt;" Guid="f9169e6e-894c-4793-ab4d-72e67e873a09" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQoAAAAcCAYAAACZM/H7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACESURBVHhe7dQxCsMwAARBv1rfl1EKIyWGfUBm4Krr95oAQSiAJBRAOkIxxjAz+2z3hOL7AP7b3gShAF4JBZCEAkhCASShAJJQAEkogCQUQBIKIAkFkIQCSEIBJKEAklAASSiAJBRAEgogCQWQhAJIQgEkoQDSayiWdZiZre2OUAD8mvMGCkhotcyG7eEAAAAASUVORK5CYII=" InformativeScreenshot="0b97eda7fb4bcb111b34f2857aeefe80.png" Reference="o0vvAy8qH0axIcJS_h2qQw/Ntu_Re0wqUeUyQahI4aoGQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='会员登录' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="789, 425, 37, 17" CvTextArgument="EM9:" CvType="Text" DesignTimeRectangle="787, 417, 142, 32" ElementType="Text" FullSelectorArgument="&lt;webctrl class='tableborder' tableCol='15' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl class='tableborder' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='密码：' check:innerText='密码：' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJIAAAAkCAYAAABi6GPmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHbSURBVHhe7ZhBboMwEEW5YSWkXCjiKs4JegaiXqKbLFjnBC5jYwK2iUkYVdC+J40UjA0LP30PqT4+v+3X3QK8RXAHkWATiUgUtaVIJNhEcAeRYBOIBCogEqiASKACIoEKiAQqIBKogEigAiKBCu+JdDO2ripbX7phIMMwp4qqvhjbZMZdnYx98kTYMQWROmtOmQ0v1bkd1nvac0E64dok6+A4rBKpuQ6XgT5tmgUxuksdCdH2CVRbcxsuBZEmSh9ZV5QNdktBJI+To9/4Nkhy6x6/BXeMRbIEMtKk6bMgLByGFSJJovhNTtJm7IOaflbX3zeRTHlB0vSRd8gzUuRYpHfaP0WRphsZRHJjo0A9TqjGmj5pRKxRHEkeN28+P+mZZP2CLIh0DFYkkjBvupNeZnp8jVL4JKvCkTfIFkSaCzap2ZEHR6Eg0kOgkDJLEiT9jeuDmkejPRFpCfdsRDokz0W6xj3Pq0y+2BDpT1NIJI9scHycyVicQulYKpKRPiuTaKH34i+AY/LrIi3njT9Gc++h2d4/q0XKpkimUpGm95+J5Ofm5ESk/bNKpLW8nkiRaAhzWFRFgv8LIoEKiAQqIBKogEigAiKBCogEKiASqIBIoEIiEkW9X9b+AFa4uvbXL41bAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click Login'" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" Timeout="100" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/member/login/" ContentHash="xyuA2FZYl0qrtGD85_-bug" CvElementArea="931, 484, 67, 32" CvType="Button" DesignTimeRectangle="934, 486, 63, 27" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl class='tableborder' tableCol='15' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl class='tableborder' tag='TABLE' /&gt;&lt;webctrl type='submit' tag='INPUT' class='' aaname=' 登 录 ' check:text='登 录' /&gt;" Guid="aa1cd56c-2277-4b48-83d5-ffe56d6a42e4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAfCAYAAAC8hnD/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGsSURBVGhD7ZnLjYQwDEDTYKSphsMobXCCSkCUwYEKOFKCFzsJmMjM8pXYHUd60gBJBr84HwkDWqaiMlhRGaxMMvq+hzzPIcuyrwHjxbhjmWTgg6ZpYBiGrwHjxbhjmWSgKanBfwfjjkVlqIwZlcFQGQyVwbhYRgXOGDAprwK62o2/HVShbldaMO8qaS/QFmClPgVcLbTfwc2Z0UHxMmDLbvrt6iAMBbUddGK7vcS+pWfbuVUGjT4GHe9RdvCXRjEWijZeH+WJMkJKUyYk0yJSvf1zEkV1qzFDlnWWrEw9gUdmBgbsRUiBWLDjKEqijvPQaUIi+NRYYWu9bTxOhn+heYrETFjHlWGnEKX4/qR2v7JllxK4PDMIlPFx1E+OZFibzmZCyvNl8CyLfcazB/8PqnduZ7pPRgzgA1tk4FmEX+Na46eXgyLsSASJGXepx8kgVs4QNKr7dxK/Q4U1ifVx5UJ8nww8XaapGzLG1VtHcF5E/Sk23E+Fhn4XdQ5wqYw4ersRV3+2O9F1cmYR2swHuWNS7suMP4jKYKgMhspgiDL0uwmToV/UmAwtAD/Zi5ejZDKlkwAAAABJRU5ErkJggg==" InformativeScreenshot="7c6e510b3373472991cc35c55b27e95a.png" Reference="o0vvAy8qH0axIcJS_h2qQw/gu6tkqgFJUG_b7J_nLFnWw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='会员登录' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click next'" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" Timeout="100" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/member/doaction.php" ContentHash="kbYcynZN90O5USVq0p5ftQ" CvTextArea="825, 325, 286, 17" CvTextArgument="209LECMDBUKEICA ANhBE#e, idize" CvType="Text" DesignTimeRectangle="827, 324, 285, 18" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='如果您的浏览器没有自动跳转，请点击这里' check:innerText='如果您的浏览器没有自动跳转，请点击这里' /&gt;" Guid="4f3f0950-f87c-48dc-9e48-8cf0e763d370" ImageBase64="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" InformativeScreenshot="b400486edd753a1d33d6cabbf8d8ab61.png" Reference="o0vvAy8qH0axIcJS_h2qQw/YKfnjcwENUOipJtKI46hsw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='信息提示' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click Contribute'" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" Timeout="100" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/member/cp/" ContentHash="k0MoAM2qH06cLnsgSPNSNA" CvTextArea="422, 606, 33, 16" CvTextArgument="191%" CvType="Text" DesignTimeRectangle="387, 599, 221, 31" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='tableborder' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='13' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl class='tableborder' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='  投稿' check:innerText='投稿' /&gt;" Guid="5b80617b-623d-440f-9a7a-520dfdd525ef" InformativeScreenshot="d5338527bae3f8bb02b14356312b0578.png" Reference="o0vvAy8qH0axIcJS_h2qQw/CLIGYc5H906yE52Svr1VLA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='会员中心' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="645, 352, 62, 17" CvTextArgument="*54t" CvType="Text" DesignTimeRectangle="643, 347, 908, 31" ElementType="Text" FullSelectorArgument="&lt;webctrl class='tableborder' tableCol='40' tableRow='1' tag='TABLE' /&gt;&lt;webctrl css-selector='body&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td' isleaf='1' tableCol='1' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl class='tableborder' tag='TABLE' /&gt;&lt;webctrl type='' isleaf='1' class='' aaname='会员中心' tag='TD' check:innerText='会员中心' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click Manager Book'" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" Timeout="100" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/member/cp/" ContentHash="nglKyxkbokSl3Lm-9NEd5A" CvTextArea="415, 454, 62, 16" CvTextArgument="TH3+" CvType="Text" DesignTimeRectangle="417, 454, 60, 18" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='14' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='管理图书' check:innerText='管理图书' /&gt;" Guid="f86890a5-fb48-4acb-8708-d39a96b92a0a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAWCAYAAABwvpo0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHMSURBVFhH7ZS7jcMwDIYzS0bKBtnkCgNps0KKVK69QhoDWUNj6EyKlkiKUmw5d439A4QfEmnyI62T37kOAHTdrQ4AdN2tFADnn9cff7q96ZnJDf5yvvuno+co8jlzm/aNsF+/Z3YdJk9w/7DPstnXEsTT6+Oj6CMAuP5uf3Aq6JIVSRZhBRDdOD/yRNQaTwgBPPwLF0CVJoAqxaAMAM45/7pBvnkDEwDqxKUffIdXthPWICHcY00B6DsAyk0g/wYAUYYvAQgJpqLhORQaEmIdKiZgADCKiGYAiMWr7mP35v3i+29sVhbbND5lSWkCILDpWLN8dJsngL1DEHhPBXIgxQaQrAmw3pEkgFpgLda58H9xo0MwxlsAABdI+I7F4km1AKj4iEMQlBeTWyxEaNsv0PHvimRD3LA2wegbARQOVROAOACFVJFCBoCYyJoJYAVbSUdfDmaFKTh/NwFClbUMQJJ5KLb8AqR0tiStnICaZJEx+aLRv80BQHFx3YbyLwBkogXLxpOPpDq4FByh0gQIGOx7GwBgbSrvpglAkjEQKzyDMusTAPJfaksBZLF1Y746AUy6eyWDGKUJKGnDBFjKAOxNBwC67lY7B+D9L6q+Ki+Qyv3GAAAAAElFTkSuQmCC" InformativeScreenshot="0c95671b3b2a1c208cafb044611a30c3.png" Reference="o0vvAy8qH0axIcJS_h2qQw/OSFW6upAFkevr5NCB98DMQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='会员中心' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="566, 454, 33, 17" CvTextArgument="#7" CvType="Text" DesignTimeRectangle="569, 454, 30, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='14' tag='TABLE' /&gt;&lt;webctrl aaname='发布' tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='发布' type='' tag='A' class='' check:innerText='发布' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAWCAYAAAClrE55AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEqSURBVEhL7ZSxDYQwDEWZhZHYgE0okGhZgYKKmhVokFiDMXyJ4yiJYwK5QzoKvhTdOcL2i+2kgIfoBeF6QbgikH3qoeg2sri9w1g30K5knmjpmiBWSgyEJzJ2Ne1kK+0zVOWFBPhdD6PnmlIIsg5QlAMsZAJs0IrB+L62FVz2cjECEGyD6JBaAmhmNbSSw5rTYyeqTuZcJUBMwKuDaYXwQXt/BcF5seWXVzDESlmtrWeF6HQAYk5RdAO0zMEorpaFqGr1G/gIFdGHvASC1aBh0/+DObGQ3h5daUwWJfkaxJzWL7t71AhCrBLpLhAcNimRdta9PbtFd4CYPvMHTSXHpfepIrYNkg5B/FjxoDsQ7LOBMFfQJpflvjl7uISKCJKH9Q96QbgeAgLwARf+kINWfzBsAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click Add Infor'" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" Timeout="100" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/DoInfo/ListInfo.php?mid=2" ContentHash="TVlIQeyFXEiJiOF_nrmDjg" CvElementArea="638, 346, 83, 31" CvTextArea="647, 352, 63, 17" CvTextArgument="istoe" CvType="Button" DesignTimeRectangle="641, 348, 79, 27" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tableCol='40' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='button' tag='INPUT' class='' aaname='增加信息' check:text='增加信息' /&gt;" Guid="23cbf774-1479-483d-a9fe-a78e1cafe5a8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAfCAYAAACbKPEXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAI/SURBVGhD7ZpNDoIwEEa5IImncWG4his4CcZjuOAELj3CyEz/20FaqYrJNHlRSkvL61c00QakVCsis2KxMu/3O5zPZzgej0Im6Au9mWJl4onr9QqPx0PIBH2hN1OsTDTNdRBeg95MEZkbEZkVEZkVEZkV2S7z0kFz6GGydRP0hxb6m9eG6hroLn7dfhhPDbTDxJ4r4QMydV3TwUjHSiQ/WU58AbceWjvOi7oYml+TRYnkujJzJrma4nymoYXmNCb1mDSu3sIFgKE0sfVl+pNcO16UqdKcLEQgSLXpLiN0cbsF7GMG58Gc5/iOTNpO4cDdScnq5xWliVt5eMOztMEcL8hCSJgR5cZLUpgsTAGZfXeTzHEWO+rjHt/HbYlQmhO2JlMvhrkWs7Ax/rVoHkwbjj96Zqot6stUk1+RacYJrlVAsqg8v01mMXr762dmnky9APqRQuNmJDOQkrPomh/K1NuPmZQi+rAhCYUysQ++blnEvScTP3TaYUwkOMIUEpQQ950wL5leXytEpZVfQAU/JwP2X/lumsFGme4m1GTLkhl/H3RJeEfmkozoWrQbsG1Uz6UV22Yk2PC+zGiLKlIJjjiZaiH8tt+QuTaGOnbnaNxMoRuTGaMmwacScTLjVIY3t3CdrTKxj9fOifXbz0RBwXa+9CU+IpMf2Eum3Wrze7pBLcvKSa/zkWemP3ZMsNB5VJb5Rd5JJnu+Hv8rc4eIzIqIzIqwMuV383IWfzeXf3SUg77Yf3RI2V5EZrUC8AQ70GAsAvZGPgAAAABJRU5ErkJggg==" InformativeScreenshot="9f4b61507db96044f14c96119c82bc14.png" Reference="o0vvAy8qH0axIcJS_h2qQw/6E68CZz3-kOJ4Y1rb3d-qQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='管理信息' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="640, 396, 84, 34" CvTextArea="659, 404, 47, 17" CvTextArgument="Bx46" CvType="Button" DesignTimeRectangle="660, 404, 45, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl idx='2' tableCol='40' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='已发布' check:innerText='已发布' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAWCAYAAABpNXSSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFaSURBVFhH7ZWxEoIwDIZ9Q9/Qp3DjKRhcHWCVBTyG3nkRikmTNrSAnKJH7v6lLWm+JA2H4/kKv64dYivaIbYiAXG6PWCOlQVzVphh0bRwsms1lHbhAfmFnaH9iC4t3O23BjJt39OCSlSQv+LlEJSAph7WAij3XSq4wFdCq0FkjVzTA1G+pazPNZcID0JpgUAaBM/yHPPvwftlglJaCUKKqjCl/0k8EUOW0c/9VinnnUYgppkOwXxM7Ole2I69YdBvQsQqERdVIWUEuKQV5WBYFyJ4pN4Uon3mH9eMgdLCuL2wEhjfWhD2cn6OtVH3FnJsD8q425dt2FWi6d8OVuSTEPgfsA4ZAF3A19Bifr8J0U8gAcTPhSDjo3MCBLWenHoehJsSqYkgz3XBcsfibQxB8emjJykGUYvH7ycigJg1LfwRShWJJEEA+pWTCttJlwLxe9ohtqI/gLjCE7+BQeBJKTTvAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click Choose Style Book'" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/DoInfo/ChangeClass.php?mid=2" ContentHash="QYdPOP5QbUCmERKdY62Yxg" CvTextArea="794, 417, 71, 17" CvTextArgument="l-MesoN1" CvType="Text" DesignTimeRectangle="500, 408, 352, 21" DesignTimeScaleFactor="1.25" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='tableborder' tableCol='40' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SELECT' /&gt;&lt;webctrl aaname='|-{0}' tableRow='2' tag='OPTION' /&gt;&quot;, StyleBook)]" FuzzyAccuracy="0.9" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl class='tableborder' tag='TABLE' /&gt;&lt;webctrl tag='SELECT' /&gt;&lt;webctrl aaname='|-{0}' type='' tag='OPTION' class='' check:innerText='|-{0}' /&gt;&quot;, StyleBook)]" Guid="e0e35704-8917-4ba7-af93-0cb91ff965b3" ImageBase64="" InformativeScreenshot="8d2976c288f8ed59332da76ac08ab184.png" Reference="o0vvAy8qH0axIcJS_h2qQw/rylZnbIY00iRQGocr1DK0w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='增加信息' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="789, 301, 167, 17" CvTextArgument="W8FFEIeD0aRM9taB" CvType="Text" DesignTimeRectangle="499, 294, 165, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl class='tableborder' tableCol='40' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl class='tableborder' tag='TABLE' /&gt;&lt;webctrl type='' tag='STRONG' class='' aaname='请选择要增加信息的栏目                                                ' check:innerText='请选择要增加信息的栏目' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click Create Book'" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" Timeout="100" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/DoInfo/ChangeClass.php?mid=2" ContentHash="W7ZKEf5YiEWRbFWEm0w9SQ" CvElementArea="788, 882, 83, 30" CvTextArea="797, 889, 62, 17" CvTextArgument="istoas" CvType="Button" DesignTimeRectangle="790, 885, 79, 26" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl class='tableborder' tableCol='40' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl class='tableborder' tag='TABLE' /&gt;&lt;webctrl type='submit' tag='INPUT' class='' aaname='添加信息' check:text='添加信息' /&gt;" Guid="70bd4147-b071-49eb-98c7-09b7ac372a93" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAeCAYAAABQdCKyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJRSURBVGhD7ZrLbcMwDIa1oIFOk0PgNXJyJnGQMXLwBDlmBLbUk6ToWK6E1i0k4ENryw/q0y+lQGqgt2aty2zYoszn8wmXywVOp1OnEPSF3kKLMrHjfr/D6/XqFIK+0FtoUSaa1m7ovAe9hdZlVtJlNqTLbEiXidxGMB8TLFrfDiplzjCaEeZw/JhgMAbMG4brwp6xXIfsXDkLTB8GxtvWOQnWrdeXsUNynczHAvOXDGMGmB55/3zeGlSlTDt5ZDIDmDTtfARl6jUzdia2MpkOFGLOMz+/NlDBmkz7zCwp/HnhvThp+bUKscYDJhMHkUQUFuiL02UhTlg2QdnkFKZL5XDJXGC5+T1SppIss0yKgPUTYVsy3WQEIW6f1CfHw2o4YDIdYpbtoOle6Qa6ti/aJUpl0uSuygwy/k0yc1xagkhasE8OS4eDbRWFMt0EjPnzQ5o0mJSjJtMv6cmKTMtQm32+NBGR2iKZeA/+LEyXykGTKQdtj20BruDx7I4nupwjLiFxSyhMZro3Cdn8RM/ezcH7t/6M26JaJlumPmlsmdsPKRy0SCFCPqjicYXMNRn8WalGfp4/L10rz61TKVMUwOSEPiLYCkmDdnsfEfYTMrfe4Y9jn31vmdA6mZk8sf/5vqxohN3roNfZ3+kytdTKdDXG64hYfo9YRXidrF+hSqYtUhbj02cHrxaKkLT6ATpZSU42AQXJ5OIFqgz6bgmf6BLqkvmrfCeZen8r/rDM49FlNqTLbIgqs3/Vu5/Vr3r7PyHsB32p/4TQW33rMps1gE8m2lGsDBds9gAAAABJRU5ErkJggg==" InformativeScreenshot="8665e160be7ef6b5aafeba365a8ea10c.png" Reference="o0vvAy8qH0axIcJS_h2qQw/_IZOMsaMEkiucylmZQdomw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='增加信息' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DeselectAfter="True" DisplayName="Type Into 'Name PC'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="Simulate" Text="[NameProduct]" Timeout="100" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/DoInfo/AddInfo.php?mid=2&amp;enews=MAddInfo&amp;classid=18&amp;Submit=%E6%B7%BB%E5%8A%A0%E4%BF%A1%E6%81%AF" ContentHash="svUCUhW_2kmjahT1jRYb0w" CvElementArea="791, 441, 354, 27" CvType="InputBox" DesignTimeRectangle="793, 443, 351, 24" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl idx='2' parentname='add' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='add' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="53be0dfb-d6e9-4a20-8eb9-477c2c51fa12" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWMAAAAcCAYAAAC0wd5BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACWSURBVHhe7dQhDsMwAATBvtrfdxRS2VFp4wUz0qHj+5kAHCfGAAFbjMcYZmb20lbfGD8PAP5r7a4YAxwixgABYgwQIMYAAWIMECDGAAFiDBAgxgABYgwQIMYAAWIMECDGAAFiDBAgxgABYgwQIMYAAWIMECDGAAFiDBAgxgABYgwQ8DPGt/swM7N3ttpiDMAZYgxw3JwXUK4WOZncc+wAAAAASUVORK5CYII=" InformativeScreenshot="89d0714038e477d02973d750cfe500b6.png" IsResponsive="True" Reference="o0vvAy8qH0axIcJS_h2qQw/7JbxWkqchk-WwDIYLy_P4w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='增加信息' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="644, 446, 83, 18" CvTextArgument="#iI3%(*" CvType="Text" DesignTimeRectangle="643, 439, 145, 32" ElementType="Text" FullSelectorArgument="&lt;webctrl idx='2' parentname='add' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='add' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='书籍名称(*)' check:innerText='书籍名称(*)' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJUAAAAkCAYAAACANHifAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMkSURBVHhe7ZlRjqMwDIa54UpIc6GKqzAn2DO02kvsSx/6vCfIxnYCjpNAS70jzfJ/kkWhIUnjD4fRDD9+/g4IhGewVL/+BATCLRapAHiX7BGkAm5AKuAOpALuQCrgDqQC7kAq4A6kAu5AKuAOpALuHJPqPofxYw6PdMrcpjDYa4nH5xiGYQrXdL5yDdMwhOmWTjeRtuNna4Q+18sQx6ZI49M8m3OxyHh120eYP8Yw39NpQn7j6/P7H3GT6nF/pASaBae2nBwTlzkmp3E9Rp2YnOCtWMddRYpxKZWg755JPPehfiNJI/cpqew6sLC1cGfDr1JldMVKQkklIjFM4ot2nWRsfcf0KxhXDy1Vmk8pYw41RmdMmfMUJgoWt1XF4nUj8tl4QqpnqkQOvcjmieaFjtXslpJP8i2LXwqX6W+biSRJb/sspZKEN9uaLdFWqYKdMVGtPCtV41p+zygitrm2ri8hyeXEFtLFc9W/9N1K3sZD0BRM2q+S2POV/UpFyP1nfrfyk0pvexZqvyQ0UVWqjYrEpK2lEqRPKaZmo2pxJWpXzd13qkR/3HPgK5VdSE6QEkHL8KpUS1978mWkYpQC0jUSIkslx6Kq8Pa1NYaSqgOkkmNHKln0QopnwgpHQhSJbdyjQlcQTlCjTR2lCMvWG8elPqhPvsZzy1LFhiyRkmRXqn3Wcc6JX6VK6AVtC/FMwlaZp1uuLumrFlzFdL9yz3SJc2GZ4/klvgdxf/S9kiqPlaV3kAqVSo7/RCrBJI1YtrI6dJUSXpcqJ5XnksYt56WlivD9aQz9+SCQSo5uUtkFpWSOsUqIRCpxjUWne9+XioSRz6tU1Ifu20gVobHl3cq2fRW5H3/9vSMVJ1SqjIQSgLYSapclyltLdc8abanabcuotyxdqUpqqTT8YHQeml3sO9oJca9Ummt8p7GVif6do881PpVqpZZKC1q3X+D+jojR2OpPyDGpXsVKxEnLyS3j+Lbjy6FqhSrFfI1U35Jc1TYqmoKrYmx/5nepDKQC7kAq4A6kAu5AKuAOpALuQCrgDqQC7lRSIRBegUoF3BCPQvgLw+jNoCQJ9xMAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DeselectAfter="True" DisplayName="Type Into 'Input Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="Simulate" Text="[Description]" Timeout="100" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/DoInfo/AddInfo.php?mid=2&amp;enews=MAddInfo&amp;classid=18&amp;Submit=%E6%B7%BB%E5%8A%A0%E4%BF%A1%E6%81%AF" ContentHash="4Tlkxl3Y00irf9_81k1R_Q" CvElementArea="793, 540, 471, 189" CvType="InputBox" DesignTimeRectangle="793, 541, 474, 187" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl idx='2' parentname='add' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='booksay' tableRow='4' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='add' tag='TABLE' /&gt;&lt;webctrl id='booksay' type='' tag='TEXTAREA' class='' aaname='' /&gt;" Guid="dc10b5c8-623e-4e4c-b46d-3476ec903b9f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAd4AAAC/CAYAAABQQb2IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANTSURBVHhe7djBacRAFAVBR6sQFKASkxnbMruLLDA76lMVvMufABrmYwcAMsILAKGn8K7ramZmZpP36De8rw8AwByPjRVeALiZ8AJASHgBICS8ABASXgAICS8AhIQXAELCCwAh4QWAkPACQEh4ASAkvAAQEl4ACAkvAISEFwBCwgsAIeEFgJDwAkBIeAEgJLwAEBJeAAgJLwCEhBcAQsILACHhBYCQ8AJASHgBICS8ABASXgAICS8AhIQXAELCCwAh4QWAkPACQEh4ASAkvAAQEl4ACAkvAISEFwBCwgsAIeEFgJDwAkBIeAEgJLwAEBJeAAgJLwCEhBcAQsILACHhBYCQ8AJASHgBICS8ABASXgAICS8AhIQXAELCCwAh4QWAkPACQEh4ASAkvAAQEl4ACAkvAISEFwBCwgsAIeEFgJDwAkBIeAEgJLwAEBJeAAgJLwCEhBcAQsILACHhBYCQ8AJASHgBICS8ABASXgAICS8AhIQXAELCCwAh4QWAkPACQEh4ASAkvAAQEl4ACAkvAISEFwBCwgsAIeEFgJDwAkBIeAEgJLwAEBJeAAgJLwCEhBcAQsILACHhBYCQ8AJASHgBICS8ABASXgAICS8AhIQXAELCCwAh4QWAkPACQEh4ASAkvAAQEl4ACAkvAISEFwBCwgsAIeEFgJDwAkBIeAEgJLwAEBJeAAgJLwCEhBcAQsILACHhBYCQ8AJASHgBICS8ABASXgAICS8AhIQXAELCCwAh4QWAkPACQEh4ASAkvAAQEl4ACAkvAISEFwBCwgsAIeEFgJDwAkBIeAEgJLwAEBJeAAgJLwCEhBcAQsILACHhBYCQ8AJASHgBICS8ABASXgAICS8AhIQXAELCCwAh4QWAkPACQEh4ASAkvAAQEl4ACAkvAISEFwBCwgsAIeEFgJDwAkBIeAEgJLwAEBJeAAgJLwCEhBcAQsILACHhBYCQ8AJASHgBICS8ABASXgAICS8A3GhZlq8dhBcAbnJEV3gB4GZHcLdt+7l8E14AmOyv6A7CCwATXUV3EF4AmOQsusftILwAMMFVdIUXACa6iu7rl7PwAsAb/hPdQXgB4E0jsq/OboPwAkDoNLzDeDAzM7O5e/QUXgDgXsILAJl9/wTeds5mfSCsGgAAAABJRU5ErkJggg==" InformativeScreenshot="bb1c11504fd51b312c3155dde88b84e4.png" IsResponsive="True" Reference="o0vvAy8qH0axIcJS_h2qQw/hlwfPh_bU0-aRclEWIh8iw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='增加信息' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="644, 626, 63, 17" CvTextArgument="#iiat" CvType="Text" DesignTimeRectangle="643, 537, 145, 195" ElementType="Text" FullSelectorArgument="&lt;webctrl idx='2' parentname='add' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='add' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='书籍简介' check:innerText='书籍简介' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJUAAADHCAYAAAAQ5BGzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQxSURBVHhe7dldThtXGIBh77ASUjaEvBWygq6BqJvoTS647gpczx8ej8cQkpdIVZ9HOkIz2IOl8/KNMYc//vz79Nc/J/hlS0evUVlWtUwqMktHoiIjKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiInKnKiIicqcqIiJypyoiL3c1F9fzo9fHk6vcyHo2/H02F7bvby9eF0OBxPz/PxxfPpeDicjt/mwx3Pj4f96w6v4fBwevo+H/+I4TWef97D171XSSWL6uX7yxTAdqPHzR/Ob9bj0+npy87583rd9DmC2+8/v//crflax8fh6wdj5EO6SbVYT6w5qGkSDVPpsplXE2hv6qzPbX7eOPnG4+GaexNwYwlqmYjjsbA+yw9ENd2i1tPg/lpv8Mt5mqyieBy+c87g25zGsLHjucF1cNNzhwjOX88TbXzG6+O3jz0f3wv8bHd6Drahkekm1c656b3UJrzzY573zr+uzeRZxTcF8sZ6jfRsjubq3I35F+aNKPm4LqphE+9tzuukWlnFMm3u/dvYy9fju7eqMeDxetOUu7yW/WsPgW7fu3kD32ij2oYzPG6ZIstaHvNuVMstcDq6N6WWEC5Rbf1AVKTeiWr+rd/ZzDfXNrirSTXfct5YU0i3UW3f/6zDuBvVGLaofqduUs0uf5lNG3cbzf3b3LVoUonqt/vUqCbztFtv+LjRt4EM6zKNokl1572eqD5PHtU4UVabO2z2w+Nxjmj7EcO163CKSTVdYy8eUX2eX4/qZuqsPhNapsQS0fhX1vlWdPOcy/rIpFq7jWqekG/EL6rPkU+qtefH28k0/DvnZybVrqs41x9wzkHt/IyFqD7Pz0X1UduIrmK4Xm9GxH/C74mK/xVRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExU5UZETFTlRkRMVOVGRExW5m6gsq1pjVJbVrb9P/wJXh6B2Z5z4SgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <Sequence DisplayName="Upload file" sap:VirtualizedContainerService.HintSize="449.6,123.2" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click Choose File'" sap:VirtualizedContainerService.HintSize="387.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" Timeout="100" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/DoInfo/AddInfo.php?mid=2&amp;enews=MAddInfo&amp;classid=18&amp;Submit=%E6%B7%BB%E5%8A%A0%E4%BF%A1%E6%81%AF" ContentHash="-d6RFurQ4ke0AHsnRkVpgQ" CvElementArea="790, 506, 103, 27" CvTextArea="800, 511, 189, 16" CvTextArgument="Choose File No file chosen" CvType="Button" DesignTimeRectangle="793, 509, 279, 23" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl idx='2' parentname='add' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='add' tag='TABLE' /&gt;&lt;webctrl type='file' tag='INPUT' class='' aaname='' /&gt;" Guid="b8f3cea4-8fd5-4c64-b370-1d88597dd74e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARsAAAAbCAYAAABMWiuVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARxSURBVHhe7Z07bjIxFIXZIFKElK2k+EUVsYVUpCWLIEpLVpCCOgUlS/Dv99x7bY/nBUxG50hHgvFzBs6H7SJZKQiCoDsIsIEg6C6KsLlcLurt7U29vLzAD7J5/uZzgKAlKsLGfNG/vr7U9XqFH2Tz/M3nAEFLVISN+WXNBQC+r83nAEFLFGAzMwM20FIF2MzMgA20VAE2M/PjYHNRh+eVWq2MN+rw6y9bndROX9983OLw2vW9+/ZvocVqOGx+9mptv5iNt5+8zvGfvv7vyK7N3ef3Nbsn5qe9Ooc6/rV7Dmu1/0n7GuIybBoYyNBfPjZq9XzQNYbr9Kr7fj35d77P1U6jwAiwgcZrEGwsRGTAPHzW72de7y/CJoCkix8AmwYCTuNhUws8YAONV3/YfG5T0BTKAJv+rsFm83FIgg/YQH9BvWHTByCu7l7tn8Ivcqat3I5l+nYrqWAZ7KPa0varrTqSttfrmY+flHN3gU1tG9U+33bXYXMRW5wcbOgqyJivhLhc2Ju62no7Vd1Gfe+SNu2ScwqACbDh5RJsbj6ybVDad9NeltHzqG5jQ9OoJ2xccOlWqc0hdM1ZjgNDbG9XQml5AxwPChJ+G/QY4HQ+HIZivNi+DJxxsPHzpcBsWwlm3AU2MvwcNh4exfOXnELo/FutVthY0ND+fFiLwPHlFIi/B7Wx9f18KQRs/817e55ExzNt43wzY8e+6TPzYn3Xx4am0yDYyIPgkm3wRXApDDgYvG04PQyyWxQKmBQmzKavBBwpoKgdjMwXULoBVBE29nUKsux9FtwNNvodAQyDTQICIwGLRH1g4+bBVxayvlBrgNOx+Xi5cn3VAMjeM60rZMalgLOq9d3SHzRKt1/ZiJA110p9GYD48FLwENuw+345HHjdMjgqsBm6svErtawnhg0NShE8UZlff6Y0dGXYuNfZeyzAJj+noHRsNp5dxaSgovNzKx9vMo6rQ8qIAZv7a+IzG77yGQSbJLxdVwp+C2bt2th6FXBIj4GNg1s63z7uDpsmxCcS5nywp4cND2i78nMKqgS+A2ys/NYqAkXfa/u4RpWxoUnVGzYMBrLMwqEpa4dNARoUMNmxaqsrBx0DvCHhHwMbef9D3Ac2MRjPJFR32kb1CuNNt1Gp4tyzz4KqNjY0pfrDRttCQobKho5DoAabsO0YfkCcObNhqyHZn7afZ+ncaRRsMvPNzrHF/WATgqXHjMFzYaGrmGQVkCgNXRk2WjbEmZBWVi8cDvqanWM6thyv/YDY1OX3Zuvbvv2KTszL3FvTFrC5lwbBxtqDgloGuAobYx/+2I+ob+zgFpyHXLE8AIe4BBrjcbAx9sAh43UFjXFf2IRw8ED5kMU5tIHGKA1dK2yM5LZFtE8l50RhUQ98hCpr68TObIwFXMrl3caGptFw2MA3cRk2EPS3BdjMzIANtFQBNjMzYAMtVYDNzAzYQEtVhA3+BvHjjb9BDC1ZETb47wqPt3n++O8K0FIVYQNBEHRLATYQBN1BSv0HW0Wn87PDQzYAAAAASUVORK5CYII=" InformativeScreenshot="fc7dc437cc9a2b0421471510002a5475.png" IsResponsive="True" Reference="o0vvAy8qH0axIcJS_h2qQw/MGESyyDWVEKAAs8GIoolLg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='增加信息' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="645, 511, 82, 20" CvTextArgument="JfE+fE(*)" CvType="Text" DesignTimeRectangle="643, 505, 145, 31" ElementType="Text" FullSelectorArgument="&lt;webctrl idx='2' parentname='add' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='add' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='上传书籍(*)' check:innerText='上传书籍(*)' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJUAAAAjCAYAAACdMUgnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALTSURBVHhe7ZpRbqMwEIa54UpIvVDEVegJ9gyJ9hL7kgeeewKvZ2zDYMbYJZNUS/5PGqWhGJzOx29Hu92v33/dny8HwMMkj2apUCirQlIBM5JHkAqYAamAOZAKmAOpgDmQCpgDqYA5kAqYA6mAOZAKmHNQqqsbus4Nt/i2yuTGj/z8cI3+c4rvG7iPrv8Y/dUEt8F1+bHI9Nm7rhv8nXJa5h/O2Y6nz9K78R7fRsK9vvl5TsprpCIZuDmpUXu1bdiMItV0n9z1oozje+bX9nUZWfDNcV9SCL6muBdJE34vpMrnQ4Lvzf9NeIlU3KDL+nnXjlXRkiohEysKFeZHc10avZKFz1MkKBwPYwc3UNHPaood+Fwn4/lSrRqcaBnfkmqpZHOzJOEG+zS7RRVJvrnpa+ESeUqtUD+PAGn1mFR6g+UfPD65fGz5uVqlJ50amjdbOZb2N6vy51y143MlMcvC15OKCOPfeW/11KTi5sY9jDw3HC+Is4cm1c5GfUkqwSapMjE4ibZJ07Snihxa2k/EE6WiPz41LCRUnl41IVVKUuUNZDFSAsVK59Sk4uVLS6CEkKoApAqvT9yo5xKFsauGy+JmhDHq7/cqF26VVJX7+uI5VqWqw0lcSs834AekKsDNrGxwC8sNIRvJSZEJ0yyKgVRIqvD6Oqk0eVqEIhqlCsS0k83VlsVY8/z4nIa57ACpwuuLkyotRb3/FuVlaG3ijlR5I3ljfRmiRPH6NF5pNo1d5vedz6YRxuPb308tfyk5CqJskFKlsXMJMSn56LwkUVrSNmOWkvNjQVvnlNOauiemIlVcQpQm1Gp5UnekivDS1bKPkVLtcPXplycT/XOOfC9ZJ5WH5TsihrLkviEHk+o/IZeIZdk+AFS59IfSCinFnFuqh0j7vrZvgiFt8b8UCEgFzIFUwBxIBcyBVMAcSAXMgVTAnI1UKJRVIamAGcEj5/4BRIJrwIVkF8sAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Input Link File'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="Simulate" Text="[LinkEbookPDF]" Timeout="100" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable ContentHash="g9uXJvlCnE2ZVR6hqVyjLA" CvElementArea="229, 505, 454, 32" CvType="InputBox" DesignTimeRectangle="234, 511, 423, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="614888a9-85b6-4b2f-8d72-77ada8a32f54" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAasAAAAYCAYAAABEONICAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABvSURBVHhe7dUxAQAADMOg+Tfd2cgBJrgBQJysAMiTFQB5sgIgT1YA5MkKgDxZAZAnKwDyZAVAnqwAyJMVAHmyAiBPVgDkyQqAPFkBkCcrAPJkBUCerADIkxUAebICIE9WAOTJCoA8WQGQJysA4rYHdbOJMgEfuMcAAAAASUVORK5CYII=" InformativeScreenshot="e11e91486cd73ab7e00475d1399a065e.png" Reference="o0vvAy8qH0axIcJS_h2qQw/dkOia6CM00SBVhEbV72nIA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="{x:Null}" ClickType="Single" DisplayName="Click 'Upload'" sap:VirtualizedContainerService.HintSize="387.2,180.8" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" Timeout="100" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="0ktgZyMO10CGqoqiJotQ9A" CvElementArea="695, 542, 110, 33" CvTextArea="730, 551, 38, 16" CvTextArgument="Open" CvType="Button" DesignTimeRectangle="696, 543, 110, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" Guid="85029dc4-9162-410c-bdac-df3f07a7cebb" InformativeScreenshot="a12ebcb00001c79fd5226232480f96e3.png" Reference="o0vvAy8qH0axIcJS_h2qQw/KuhMrrv-RUqi02AZAC9HgA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click Submit'" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" Timeout="100" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/DoInfo/AddInfo.php?mid=2&amp;enews=MAddInfo&amp;classid=18&amp;Submit=%E6%B7%BB%E5%8A%A0%E4%BF%A1%E6%81%AF" ContentHash="px1JtZoWCECLO_jKq00CAA" CvElementArea="790, 737, 53, 31" CvTextArea="800, 744, 33, 17" CvTextArgument="1ES" CvType="Button" DesignTimeRectangle="793, 740, 49, 26" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl idx='3' parentname='add' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='add' tag='TABLE' /&gt;&lt;webctrl type='submit' tag='INPUT' class='' aaname='提交' check:text='提交' /&gt;" Guid="3a434d08-45a5-4ec7-bb29-335b13218d86" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADUAAAAeCAYAAACMjVaFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGMSURBVFhH7ZhBkoMgEEW9IDVZ5ShOVYoDzC4HIBeY/aywvMFsXbDJFTxCDw1qQEERTZUwLn4lBIn9+ne3VRYfP0/ITXlDXb9/4fPrDmVZJieMG+OfQOFGXdfQtm1ywrgx/gkUErsOpCKM/4RKQSdUKtoMxW8FkIew1kXh0Y1bZyeqqLyOAGsceyv0Fihz3Us8yDKUlErKhYFw7IUqHkpl1XaCVoFONQyIa39JgbCHc2oPvQXKmWWUDwpdH++hm5FluBMUAyqDxvJzXTMn5SAOh0rYAI0A3u+tHBzboIbewBtzBeZ0yBIF3p3XrlJgMvhJyXb/TWXC8NNV0j7FQ6lBQYF6egg110cKyBoctiPWfosJC3dsm1NSuvzsnurXq4ZDlyTlovk9QjtDCWCXV0Z1v/RlpzVXRub1Mf3Za1+o4dmls7zKqdGz6yBQelBgMDrjRPbbMhSed4EMv4cmxVA81OAKBoNlNy4t3zSULhquLDpi3CcUcLNTR9QJlYr+D1SWr8iyfJmZkzKEesIfu/pEBVlD+bUAAAAASUVORK5CYII=" InformativeScreenshot="f72d1f8d1dabf0926b999fbf46bf5d47.png" Reference="o0vvAy8qH0axIcJS_h2qQw/11ayQVjElEamQACiIe48HA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='增加信息' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click next'" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" Timeout="100" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://kgbook.com/e/member/doaction.php" ContentHash="kbYcynZN90O5USVq0p5ftQ" CvTextArea="825, 325, 286, 17" CvTextArgument="209LECMDBUKEICA ANhBE#e, idize" CvType="Text" DesignTimeRectangle="827, 324, 285, 18" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='如果您的浏览器没有自动跳转，请点击这里' check:innerText='如果您的浏览器没有自动跳转，请点击这里' /&gt;" Guid="4f3f0950-f87c-48dc-9e48-8cf0e763d370" ImageBase64="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" InformativeScreenshot="b400486edd753a1d33d6cabbf8d8ab61.png" Reference="o0vvAy8qH0axIcJS_h2qQw/YKfnjcwENUOipJtKI46hsw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='信息提示' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <ui:CloseTab Browser="[webInput]" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="200,24.799999999999997" sap2010:WorkflowViewState.IdRef="CloseTab_2" />
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="3RrLcjG320SI_b5oC18wiw" IconBase64="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" InformativeScreenshot="2cf376d83022db8b1086e5c865e2f869.jpg" Reference="o0vvAy8qH0axIcJS_h2qQw/7E5QZyJluU2_Iz_WIsAR1Q" Selector="&lt;html app='chrome.exe' title='会员登录' /&gt;" Title="会员登录" Url="https://kgbook.com/e/member/login/" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">440,343.6</av:Point>
+          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[webInput]" Url="[LinkWeb]">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="696,1012.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Flowchart sap:VirtualizedContainerService.HintSize="633.6,878.4" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <av:Point x:Key="ShapeLocation">270,2.3999999999999986</av:Point>
+                    <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">300,77.6 300,127.6</av:PointCollection>
+                    <x:Double x:Key="Height">801.6</x:Double>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Flowchart.StartNode>
+                  <x:Reference>__ReferenceID3</x:Reference>
+                </Flowchart.StartNode>
+                <FlowStep>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">200,466.4</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">310,323.59999999999997 310,373.59999999999997</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                        <Sequence DisplayName="Logout" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click user" sap:VirtualizedContainerService.HintSize="529.6,126.4" sap2010:WorkflowViewState.IdRef="Click_37" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="&lt;webctrl aaname='Logout' aria-role='menuitem' tag='A' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                            </ui:Click.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:Click>
+                          <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[stCheck =&quot;&quot;]" DisplayName="Wait Screen" sap:VirtualizedContainerService.HintSize="529.6,472" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_21" MaxIterations="20">
+                            <ui:InterruptibleDoWhile.Body>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,317.6" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <Literal x:TypeArguments="x:String" Value="" />
+                                    </InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:GetFullText IgnoreHidden="{x:Null}" ContinueOnError="True" DisplayName="Get Full Text // Check Load web" sap:VirtualizedContainerService.HintSize="433.6,109.6" sap2010:WorkflowViewState.IdRef="GetFullText_23">
+                                  <ui:GetFullText.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f06da37-64df-47a4-9832-e395c9e81d7e" Selector="&lt;webctrl aaname='Logout' aria-role='menuitem' tag='A' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                  </ui:GetFullText.Target>
+                                  <ui:GetFullText.Text>
+                                    <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                  </ui:GetFullText.Text>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:GetFullText>
+                              </Sequence>
+                            </ui:InterruptibleDoWhile.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:InterruptibleDoWhile>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click user" sap:VirtualizedContainerService.HintSize="529.6,109.6" sap2010:WorkflowViewState.IdRef="Click_40" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="&lt;webctrl aaname='Logout' aria-role='menuitem' tag='A' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                            </ui:Click.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:Click>
+                        </Sequence>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                </FlowStep>
+                <FlowDecision x:Name="__ReferenceID1" Condition="[stCheck.Contains(&quot;会员登录&quot;)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <av:Point x:Key="ShapeLocation">264.8,210.39999999999998</av:Point>
+                      <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
+                      <av:PointCollection x:Key="FalseConnector">344,253.99999999999997 420,253.99999999999997 420,380 390,380</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">264.8,253.99999999999997 234.80000000000007,253.99999999999997 234.80000000000007,260 210,260</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <FlowDecision.True>
+                    <FlowStep x:Name="__ReferenceID2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">10,218.4</av:Point>
+                          <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">110,301.6 110,380 190,380</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="449.6,768" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into // User" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="TypeInto_22" SimulateType="True" Text="[UserName]">
+                          <ui:TypeInto.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3dd2c67c-73e0-4321-b2cc-3ab948dc38d5" Selector="&lt;webctrl class='tableborder' tableCol='15' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='username' tableRow='2' tag='INPUT' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                          </ui:TypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:TypeInto>
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into // Pass" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="TypeInto_23" SimulateType="True" Text="[Password]">
+                          <ui:TypeInto.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3dd2c67c-73e0-4321-b2cc-3ab948dc38d5" Selector="&lt;webctrl class='tableborder' tableCol='15' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='password' tableRow='3' tag='INPUT' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                          </ui:TypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:TypeInto>
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Login" sap:VirtualizedContainerService.HintSize="387.2,126.4" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                          <ui:Click.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:Click.CursorPosition>
+                          <ui:Click.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="&lt;webctrl class='tableborder' tableCol='15' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='INPUT' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                          </ui:Click.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:Click>
+                        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[stCheck =&quot;&quot;]" DisplayName="Wait Screen" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_20" MaxIterations="30">
+                          <ui:InterruptibleDoWhile.Body>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,317.6" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <Literal x:TypeArguments="x:String" Value="" />
+                                  </InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:GetFullText IgnoreHidden="{x:Null}" ContinueOnError="True" DisplayName="Get Full Text // Check Load web" sap:VirtualizedContainerService.HintSize="433.6,109.6" sap2010:WorkflowViewState.IdRef="GetFullText_22">
+                                <ui:GetFullText.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f06da37-64df-47a4-9832-e395c9e81d7e" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='DIV' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:GetFullText.Target>
+                                <ui:GetFullText.Text>
+                                  <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                </ui:GetFullText.Text>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:GetFullText>
+                            </Sequence>
+                          </ui:InterruptibleDoWhile.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:InterruptibleDoWhile>
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Pass" sap:VirtualizedContainerService.HintSize="387.2,109.6" sap2010:WorkflowViewState.IdRef="Click_55" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:Click.CursorPosition>
+                          <ui:Click.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                          </ui:Click.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:Click>
+                      </Sequence>
+                      <FlowStep.Next>
+                        <FlowStep x:Name="__ReferenceID0">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">190,338.4</av:Point>
+                              <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[stCheck =&quot;&quot;]" DisplayName="Wait Screen" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_22" MaxIterations="5">
+                              <ui:InterruptibleDoWhile.Body>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,317.6" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <Literal x:TypeArguments="x:String" Value="" />
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:GetFullText IgnoreHidden="{x:Null}" ContinueOnError="True" DisplayName="Get Full Text // Check Load web" sap:VirtualizedContainerService.HintSize="433.6,109.6" sap2010:WorkflowViewState.IdRef="GetFullText_24">
+                                    <ui:GetFullText.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f06da37-64df-47a4-9832-e395c9e81d7e" Selector="&lt;webctrl class='tableborder' tableRow='1' tag='TABLE' /&gt;&lt;webctrl parentid='domenumemberid' tableRow='1' tag='TD' aaname='  帐号' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                    </ui:GetFullText.Target>
+                                    <ui:GetFullText.Text>
+                                      <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                    </ui:GetFullText.Text>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:GetFullText>
+                                </Sequence>
+                              </ui:InterruptibleDoWhile.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InterruptibleDoWhile>
+                            <Sequence DisplayName="Create Product" sap:VirtualizedContainerService.HintSize="449.6,123.2" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="stChoice" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click New Product" sap:VirtualizedContainerService.HintSize="387.2,126.4" sap2010:WorkflowViewState.IdRef="Click_42" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="&lt;webctrl class='tableborder' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='*' tag='TD' aaname='  投稿' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:Click.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:Click>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Manager Book" sap:VirtualizedContainerService.HintSize="387.2,126.4" sap2010:WorkflowViewState.IdRef="Click_56" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="&lt;webctrl tableRow='14' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' aaname='管理图书' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:Click.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:Click>
+                              <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[stCheck =&quot;&quot;]" DisplayName="Wait Screen" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_27" MaxIterations="5">
+                                <ui:InterruptibleDoWhile.Body>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,317.6" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_27">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <Literal x:TypeArguments="x:String" Value="" />
+                                        </InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:GetFullText IgnoreHidden="{x:Null}" ContinueOnError="True" DisplayName="Get Full Text // Check Load web" sap:VirtualizedContainerService.HintSize="433.6,109.6" sap2010:WorkflowViewState.IdRef="GetFullText_29">
+                                      <ui:GetFullText.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f06da37-64df-47a4-9832-e395c9e81d7e" Selector="&lt;webctrl tableCol='40' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='*' tag='INPUT' aaname='增加信息' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                      </ui:GetFullText.Target>
+                                      <ui:GetFullText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                      </ui:GetFullText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:GetFullText>
+                                  </Sequence>
+                                </ui:InterruptibleDoWhile.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InterruptibleDoWhile>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click add book" sap:VirtualizedContainerService.HintSize="387.2,126.4" sap2010:WorkflowViewState.IdRef="Click_57" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="&lt;webctrl tableCol='40' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='*' tag='INPUT' aaname='增加信息' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:Click.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:Click>
+                              <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[stCheck =&quot;&quot;]" DisplayName="Wait Screen" sap:VirtualizedContainerService.HintSize="387.2,76" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_23" MaxIterations="30">
+                                <ui:InterruptibleDoWhile.Body>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,317.6" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_23">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <Literal x:TypeArguments="x:String" Value="" />
+                                        </InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:GetFullText IgnoreHidden="{x:Null}" ContinueOnError="True" DisplayName="Get Full Text // Check Load web" sap:VirtualizedContainerService.HintSize="433.6,109.6" sap2010:WorkflowViewState.IdRef="GetFullText_25">
+                                      <ui:GetFullText.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f06da37-64df-47a4-9832-e395c9e81d7e" Selector="&lt;webctrl class='tableborder' tableCol='40' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='STRONG' aaname='请选择要增加信息的栏目                                                ' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                      </ui:GetFullText.Target>
+                                      <ui:GetFullText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                      </ui:GetFullText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:GetFullText>
+                                  </Sequence>
+                                </ui:InterruptibleDoWhile.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InterruptibleDoWhile>
+                            </Sequence>
+                            <Sequence DisplayName="Create Product Des" sap:VirtualizedContainerService.HintSize="449.6,1657.6" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Style Book" sap:VirtualizedContainerService.HintSize="387.2,126.4" sap2010:WorkflowViewState.IdRef="Click_58" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="[string.Format(&quot;&lt;webctrl class='tableborder' tableCol='40' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SELECT' /&gt;&lt;webctrl aaname='|-{0}' tableRow='*' tag='OPTION' /&gt;&quot;, StyleBook)]" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:Click.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:Click>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Create" sap:VirtualizedContainerService.HintSize="387.2,126.4" sap2010:WorkflowViewState.IdRef="Click_59" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="&lt;webctrl class='tableborder' tableCol='40' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='*' tag='INPUT' aaname='添加信息' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:Click.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:Click>
+                              <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[stCheck =&quot;&quot;]" DisplayName="Wait Screen" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_28" MaxIterations="5">
+                                <ui:InterruptibleDoWhile.Body>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,317.6" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_28">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <Literal x:TypeArguments="x:String" Value="" />
+                                        </InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:GetFullText IgnoreHidden="{x:Null}" ContinueOnError="True" DisplayName="Get Full Text // Check Load web" sap:VirtualizedContainerService.HintSize="433.6,109.6" sap2010:WorkflowViewState.IdRef="GetFullText_30">
+                                      <ui:GetFullText.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f06da37-64df-47a4-9832-e395c9e81d7e" Selector="&lt;webctrl parentname='add' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='*' tag='TD' aaname='                增加信息                                                ' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                      </ui:GetFullText.Target>
+                                      <ui:GetFullText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                      </ui:GetFullText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:GetFullText>
+                                  </Sequence>
+                                </ui:InterruptibleDoWhile.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InterruptibleDoWhile>
+                              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into // Name Product" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="TypeInto_26" SimulateType="True" Text="[NameProduct]">
+                                <ui:TypeInto.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3dd2c67c-73e0-4321-b2cc-3ab948dc38d5" Selector="&lt;webctrl idx='2' parentname='add' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='*' tag='INPUT' name='title' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:TypeInto.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:TypeInto>
+                              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into // Description" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="TypeInto_29" SimulateType="True" Text="[NameProduct]">
+                                <ui:TypeInto.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3dd2c67c-73e0-4321-b2cc-3ab948dc38d5" Selector="&lt;webctrl idx='2' parentname='add' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='booksay' tableRow='*' tag='TEXTAREA' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:TypeInto.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:TypeInto>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click With Choice File" sap:VirtualizedContainerService.HintSize="387.2,126.4" sap2010:WorkflowViewState.IdRef="Click_60" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="&lt;webctrl idx='2' parentname='add' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='*' tag='INPUT' name='downpathfile' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:Click.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:Click>
+                              <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[stCheck =&quot;&quot;]" DisplayName="Wait Screen" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_24" MaxIterations="30">
+                                <ui:InterruptibleDoWhile.Body>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,317.6" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_24">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <Literal x:TypeArguments="x:String" Value="" />
+                                        </InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:GetFullText IgnoreHidden="{x:Null}" ContinueOnError="True" DisplayName="Get Full Text // Check Load web" sap:VirtualizedContainerService.HintSize="433.6,109.6" sap2010:WorkflowViewState.IdRef="GetFullText_26">
+                                      <ui:GetFullText.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f06da37-64df-47a4-9832-e395c9e81d7e" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                      </ui:GetFullText.Target>
+                                      <ui:GetFullText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                      </ui:GetFullText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:GetFullText>
+                                  </Sequence>
+                                </ui:InterruptibleDoWhile.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InterruptibleDoWhile>
+                              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into // Upload" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="TypeInto_27" SimulateType="True" Text="[LinkEbookPDF]">
+                                <ui:TypeInto.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3dd2c67c-73e0-4321-b2cc-3ab948dc38d5" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:TypeInto.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:TypeInto>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Open" sap:VirtualizedContainerService.HintSize="387.2,126.4" sap2010:WorkflowViewState.IdRef="Click_47" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:Click.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:Click>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Submit" sap:VirtualizedContainerService.HintSize="387.2,126.4" sap2010:WorkflowViewState.IdRef="Click_61" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="&lt;webctrl idx='3' parentname='add' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='*' tag='INPUT' aaname='提交' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:Click.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:Click>
+                              <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[stCheck =&quot;&quot;]" DisplayName="Wait Screen" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_30" MaxIterations="30">
+                                <ui:InterruptibleDoWhile.Body>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,317.6" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_29">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <Literal x:TypeArguments="x:String" Value="" />
+                                        </InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:GetFullText IgnoreHidden="{x:Null}" ContinueOnError="True" DisplayName="Get Full Text // Check Load web" sap:VirtualizedContainerService.HintSize="433.6,109.6" sap2010:WorkflowViewState.IdRef="GetFullText_31">
+                                      <ui:GetFullText.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f06da37-64df-47a4-9832-e395c9e81d7e" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='B' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                      </ui:GetFullText.Target>
+                                      <ui:GetFullText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                                      </ui:GetFullText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:GetFullText>
+                                  </Sequence>
+                                </ui:InterruptibleDoWhile.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InterruptibleDoWhile>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Out" sap:VirtualizedContainerService.HintSize="387.2,109.6" sap2010:WorkflowViewState.IdRef="Click_62" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c7bf2ab-30ec-447f-9dd3-14dc378b8e12" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                                </ui:Click.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:Click>
+                            </Sequence>
+                          </Sequence>
+                        </FlowStep>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowDecision.True>
+                  <FlowDecision.False>
+                    <x:Reference>__ReferenceID0</x:Reference>
+                  </FlowDecision.False>
+                </FlowDecision>
+                <FlowStep x:Name="__ReferenceID3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">200,127.6</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">300,180.39999999999998 300,210.39999999999998 304,210.39999999999998</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[stCheck =&quot;&quot;]" DisplayName="Wait Screen" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_19" MaxIterations="20">
+                    <ui:InterruptibleDoWhile.Body>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,317.6" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_18">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">
+                              <Literal x:TypeArguments="x:String" Value="" />
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:GetFullText IgnoreHidden="{x:Null}" ContinueOnError="True" DisplayName="Get Full Text // Check Load web" sap:VirtualizedContainerService.HintSize="433.6,109.6" sap2010:WorkflowViewState.IdRef="GetFullText_21">
+                          <ui:GetFullText.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f06da37-64df-47a4-9832-e395c9e81d7e" Selector="&lt;webctrl class='tableborder' tableCol='15' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='DIV' aaname='会员登录' /&gt;" TimeoutMS="100" WaitForReady="COMPLETE" />
+                          </ui:GetFullText.Target>
+                          <ui:GetFullText.Text>
+                            <OutArgument x:TypeArguments="x:String">[stCheck]</OutArgument>
+                          </ui:GetFullText.Text>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:GetFullText>
+                      </Sequence>
+                    </ui:InterruptibleDoWhile.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InterruptibleDoWhile>
+                  <FlowStep.Next>
+                    <x:Reference>__ReferenceID1</x:Reference>
+                  </FlowStep.Next>
+                </FlowStep>
+                <x:Reference>__ReferenceID2</x:Reference>
+                <x:Reference>__ReferenceID0</x:Reference>
+              </Flowchart>
+              <ui:CloseTab Browser="[webInput]" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="633.6,48" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:OpenBrowser>
+    </FlowStep>
+    <x:Reference>__ReferenceID4</x:Reference>
+  </Flowchart>
+</Activity>

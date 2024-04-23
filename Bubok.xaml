@@ -1,0 +1,329 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Password" Type="InOutArgument(x:String)" />
+    <x:Property Name="LinkWeb" Type="InOutArgument(x:String)" />
+    <x:Property Name="FolderInput" Type="InOutArgument(x:String)" />
+    <x:Property Name="NameProduct" Type="InOutArgument(x:String)" />
+    <x:Property Name="ChoiceType" Type="InOutArgument(x:String)" />
+    <x:Property Name="PriceProduct" Type="InOutArgument(x:String)" />
+    <x:Property Name="Description" Type="InOutArgument(x:String)" />
+    <x:Property Name="LinhkIMGcover" Type="InOutArgument(x:String)" />
+    <x:Property Name="Email" Type="InOutArgument(x:String)" />
+    <x:Property Name="UserName" Type="InOutArgument(x:String)" />
+    <x:Property Name="StyleBook" Type="InOutArgument(x:String)" />
+    <x:Property Name="LinkEbookDOC" Type="InOutArgument(x:String)" />
+    <x:Property Name="LinkEbookPDF" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
+  <sap:VirtualizedContainerService.HintSize>1130.4,701.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="CreateEbook" sap:VirtualizedContainerService.HintSize="673.6,636.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="ui:Browser" Name="webInput" />
+      <Variable x:TypeArguments="x:String" Name="stCheck" />
+      <Variable x:TypeArguments="ui:WorkbookApplication" Name="wbInput" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtInput" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.3999999999999986</av:Point>
+        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.6 300,127.6</av:PointCollection>
+        <x:Double x:Key="Width">640</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID1</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">83.19999999999999,127.6</av:Point>
+          <av:Size x:Key="ShapeSize">433.6,52.8</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,180.39999999999998 300,230.39999999999998</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:MultipleAssign DisplayName="Multiple Assign // Test" sap:VirtualizedContainerService.HintSize="478.4,492" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[FolderInput]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">["D:\Upwork\Tạo Tài Khoản Web\CreateEbook\Input\bubok"]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[LinkWeb]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">["https://www.bubok.pt/publicar-um-livro"]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[UserName]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">["TestRPA"]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[Password]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">a65445fa</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[NameProduct]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">Test RPA</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[ChoiceType]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">E-book</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[PriceProduct]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">1000</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[Description]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">Test</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[LinhkIMGcover]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[FolderInput +"\Cover.jpg"]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[LinkEbookDOC]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[FolderInput +"\sampleEBook.docx"]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[Email]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">testrpa.thinh@gmail.com</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[StyleBook]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">推理惊悚</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[LinkEbookPDF]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[FolderInput +"\sampleEBook.pdf"]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:MultipleAssign>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID0">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">200,230.39999999999998</av:Point>
+              <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome: Bubok" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="073d7b78-a063-40d6-a245-04afb623520c" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,589.6" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_8" Text="[Email]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.bubok.pt/autores/identificar-me" ContentHash="fluMWXg4WE-3O0kL9k_BfQ" CvElementArea="462, 639, 371, 59" CvType="InputBox" DesignTimeRectangle="463, 640, 369, 56" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='AutorAutorEmail' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='AutorAutorEmail' tag='INPUT' type='text' class='form-control' placeholder='Email' aaname='Email' /&gt;" Guid="a9b12844-948e-4a93-9949-6d7c91a47fdc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXUAAAA8CAYAAACZ3SrYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPvSURBVHhe7do9S2N5GIbx/U4WYqmgoFhoKQhis8U0NoKINu5YifjWyBRiZWUh+QCTRhQt3AUH3xhQxHFJXN0YQkazUZ/d+09ONuMZF3aGiclzrh/cheecRKtrzpzkp2KxaIwxxnyMqDPGmKMRdcYYc7Rq1M+uCvYxU7CNDzl7m762N6ms/bzBGGOs0aY+q9PqtbqtfseirhPvdm5s6v217Zze2tVNznI5xhhjjTb1WZ1Wr9Vt9TsWdRVfF/zx5234+e7uzu7v761UKjHGGGuQqcvqszqtXqvb6nfU8mrUdSu/c5YPFz88PNjT0xNjjLEGnTqtXqvb6ncs6npGc1so2uPjowEAGp96nS98Dv2ORV0P33Vrr38BAACNT71Wt9Xvr0a9XC5XLm0+h4eH1t3dbel0OvysDxOGhoZsYmIi/BcFADxSt1+Mup7RfI/T01Pr7e21lpaWL1aPsBJ1AEmkbv/wqC8sLNju7m51BwcH3/3e/xdRB5AEdYl6KpWqHHk9RB1AErxq1Pf29qynpyfcvU9OTlpbW5u1t7fb6uqqZTIZm52drR5bXFwMf1dErx0dHQ3n9EhncHDQtre3qx/s6ryOR7+bqANIglePusLb0dFhy8vLtrm5aSMjI9ba2mqdnZ02NzcXjk1PT38RaNnf37f5+flwXjEfGxuz/v5+u7i4COeJOoAkqkvUFdfaRaGNwqt4R7/r+Pg4BH1qaip8NUey2awNDAzY0tJS+PlrdLev99J7ClEHkER1ifrzD0ovLy/D+efhleg1KysrlSP/BjmKuh6xHB0d2fj4uHV1dYX3iEbUASRZXaJeG+1a/xX12mPPo65HL3qWrkcu5+fnls/nuVMHgH80ZdR1rjbg8vwYUQeQRHWJ+kvfU//WqG9tbYUPU2dmZsL7ra+vW19fXzhG1AEkWV2irrjWLgrrt0Zdf9fa2lp4BKOvPOrrkCcnJzY8PEzUASTaD406AKC+iDoAOELUAcARog4AjhB1AHCEqAOAI0QdABwh6gDgCFEHAEeIOgA4QtQBwBGiDgCOEHUAcISoA4AjRB0AHCHqAOAIUQcAR4g6ADhC1AHAEaIOAI4QdQBwhKgDgCNEHQAcIeoA4AhRBwBHiDoAOELUAcARog4AjhB1AHCEqAOAI0QdABwh6gDgCFEHAEdejPqbVNbuSuXKZQCAZqBuq9+xqL9NX9uvnz5XLgMANAN1W/2ORX3jQ85+eX9tpfJj5VIAQCNTr9Vt9TsW9Y+Zgr3buQkX/Pb7vf318FR5GQCgkajP6rR6rW6r37Gon10VwgkVX7fyekajh++MMcYaa+qzOq1eq9vqdyzqjDHGmn1F+xsfCaLoxBBGlAAAAABJRU5ErkJggg==" InformativeScreenshot="31c5cb5a9a5052d1ba0eaf25c13c489e.png" Reference="o0vvAy8qH0axIcJS_h2qQw/Lw6KqoNCeE--_-D-hWaMeg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Como publicar um livro – Autores de livros na Bubok' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="462, 639, 371, 59" CvType="InputBox" DesignTimeRectangle="463, 634, 56, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='form-control-placeholder' aaname='Email' check:innerText='Email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAAfCAYAAAC7xK7qAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIwSURBVFhH7ZW7i1pBFMbzP1mIpYKCYqGlIIjNFtvYCCLaSKxEfDWSQqysLBb/gNiIooWNwRcBFxFB9xEVERUfXziDc3O9JIHsJrl3Z+8HXzFnuDPnd+ecmQ+bzQbvyTqw6NaBRbcOLLp1YNEtAd8/rPF1tsbdlwU+Vp9wW5nj5k48S8AE+6n5jNjnJzRHSzw8L7BYiGcJmE6WYB+/Ldl4u91it9thv98LZQmYyrh5v2Kgx+MR5/NZSEvA1LPL9Qan0wkiSwKmhqYjp78gsq6AD4fDJfz21Ov1YLfbUa1W2ZguKJ/Ph0gkwtqU6wqYevc1Go1GcDqdMBgMV1Zu+i+kKnAmk0Gr1ZLc7XZfvfaf6r8CVyqVS0Q9aQK43W7D4XCwU49GozCZTDCbzSgWi5jNZkgmk1Ism82yvLjo22AwyOaoTbxeLxqNhnTJ0jzF+d6aAaakLBYL8vk8arUaAoEAjEYjrFYrUqkUi8Xj8avkSZ1OB+l0ms0TaCgUgtvtxmQyYfOqAtPGcvMkeFIExvcaDAYMNhaLsWeRNJ/P4fF4kMvl2PhnoiqhtWhNkqrAyktrOp2yeWVSJP5NoVC4RH4ky4GpbPv9PsLhMGw2G1uDWxPAciC5fgcsjymBqZypd6mMx+MxVquVtk74bwPTnByOpIypCvyrd/ilwPV6nV1siUSCrVcul+FyuVhME8C0sdx805cCU16lUomVNT1b9KQNh0P4/X51gd+CdGDR9c6Age9EBQa+Zau5qAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_9" Text="[Password]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.bubok.pt/autores/identificar-me" ContentHash="LfcCu-rpM0mIkqFLGj4SjQ" CvElementArea="460, 714, 374, 59" CvType="InputBox" DesignTimeRectangle="463, 715, 369, 56" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='AutorAutorPassword' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='AutorAutorPassword' tag='INPUT' type='password' class='form-control' placeholder='Password' aaname='Password' /&gt;" Guid="9132fa4b-dcfa-4979-b7b5-6bbdfe9f2fed" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXUAAAA8CAYAAACZ3SrYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAaOSURBVHhe7Z1paxRLFEDfz3fBFfdd3FCjqLihoqgoogYUjdG4DK5xwcQt7rEep5yb1+mZ5CETx5nyHLgk3V3V3cmHU7dv1Uz/MzExkQzDMIwyQqkbhmEUFErdMAyjoGiR+ujoaBoeHk6Dg4Pp6tWrhmEYRo8FfsbT+Lru8GlSbzQaaWhoKDccGxtL4+PjhmEYRo8FfsbT+BpvVz0+JfVoQAe2P336lD5//py+fPliGIZh9EjgZfyMp/F1JOLh8impk8o/f/48N/7+/Xv68eOHYRiG0aOBp/E13sbfLVKnRvPhw4c0OTmZRESk98HX4e8WqVN8J7VnBBARkd4HX+Nt/N1W6t++fWs2FRGRfgBvzyh1ajQiItI/4G2lLiJSCEpdRKQglLqISEEodRGRglDqIiIFodRFRApCqYuIFIRSFxEpCKUuIlIQSr0H4IvT1q9fn//nIiKd8Ful/vXr17Rnz540b968qVi0aFHauXNnunv3rl8W1kSpi8hc0RWpHz58OIuL7/m9fft22rdvX1qwYEG+hmJX6iIyd3RF6sePH2/u+Qnf+XvixIm0Zs2a9ObNm+bevxelLiJzxR+ROjx48CAtXLgwPXr0KG/Tlmsit/nz5+fYunVrevLkST4OZPWUbTZv3pyPU85ZvXp1Onv2bO4PvM7pwIEDuczD8SVLlqT9+/en169f54Fk9+7d+fuGA94UsmXLlnxO/u4g7p0+8TRRP/fatWvT9evXp71I5MWLF2ndunX558jISFq1alVuy+/AObgHnlQIfufVU9u3b1fqItIxPSN1rnnkyJF08+bN9O7du/Tq1assUMT59u3b3Ob+/ftp2bJl6dKlS7kNgrxx40a6ePFiFuv79++znOlHf7a5zpkzZ3J7Sj8rV67Mgg+ePn2az4mo416AJwieJOgDL1++TCtWrMjnfvbsWT7flStXct9Tp05NiT2kfv78+bRp06Z07dq1PBCRjdOHfdu2bcvXZZtBAfEvXbpUqYtIx/wRqZP5IuKqsNuBIJEmYgbuifNFVl6nmiW3A9EvX7483bt3r7kn5QFi7969OS5cuNDc+3MAoS3nQthHjx5NO3bsyJl9FTJw2iF6iHvesGFDlnaVc+fOtS058T5BnjyUuoh0SteljhTJcBcvXpyvMdtEadSaQ+p37tzJ/ejf7q1MDBAMFAcPHsxZeh3euk2Zg8wd4v4uX76c74VjtAEEH9txH7SrE8diQAip1wVNyYdSy7Fjx1r+5ngqqPcREflVuiJ1asrVQHq8GLVai0bSt27dyqUJ6uDV9iF1ZEi5gv4EZY+xsbF8LECqlGCoVw8MDKRGozFNogg96uq0pSZPKYTgd/bFfYf8Q9RxH1XqA9dMbWebDJ3tmIjIr9AVqceSRuLjx48tmSqCpfxB6YRsnCwbyYfs6oLkvAwAGzduzPKmfl0dIDg/5RAmSDm+a9euqcydsgo1bOrqDBBMkvL0EBOm7IvMmbag1EWkX+iK1NtNlFZhgpLs/OHDh809P4kaeDuZAvKOycqoaddhPxOc1M4BmSN1auFMekY2zrlOnz6d98WqlZhQ5f9BjfxXyi/1e47yy8mTJ5t7/oMBh7KRUheRTukJqSNAauWUQKqQNVfLL+1AooifMks74h5CprFNbRtRVwcSMnMEzTHa0BZ4CqB/u4lSJjmrg8psWT0DCE8X9QlUJm5ZCaTURaRTekLqMcFJmYTsnKWKrI5h+SFLDUOQSJ416XwylQwZkZJZU0Mn26UvyyJpz3acB8lGKQXIqnkyYHkh5wm4D0TPsepKGIjliIi9uhyRc9eXNM4k9XhKqJ+DUo9LGkVkLugJqQMfMuLDRiztQ+TIGQlSaw9BPn78OLehTk4Gj3wPHTo0lfkiaLZjopV2tK9PlrLNdaofLALETP2/un6+CgMF9/V/Hz6aSerQ7sNH/J1cV6mLSKf8VqmLiEh3UeoiIgWh1EVECkKpi4gUhFIXESkIpS4iUhBKXUSkIJS6iEhBKHURkYJQ6iIiBaHURUQKQqmLiBSEUhcRKQilLiJSEEpdRKQglLqISEEodRGRglDqIiIFodRFRApCqYuIFMSMUh8cHMwvjhYRkf4Bb+PvFqkPDw/nt9yLiEj/gLfxd4vUR0dH09DQkCUYEZE+AV/jbfzdInWi0WjkBuPj42lycrLZTUREegn8jKfxNd6uenya1AmMTypPjYbiu2EYhtFbgZ/xdDVDj2iRumEYhtGvMZH+BYdVzACQ35cUAAAAAElFTkSuQmCC" InformativeScreenshot="fa5bbea9cb84bcaac9b0a1a5ca11bc5c.png" Reference="o0vvAy8qH0axIcJS_h2qQw/0oTPxA43LkW_Qou5u8S-Ug" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Como publicar um livro – Autores de livros na Bubok' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="460, 714, 374, 59" CvType="InputBox" DesignTimeRectangle="463, 721, 95, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='form-control-placeholder' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAAgCAYAAAAG98ZXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASFSURBVGhD7ZoHSy1JEIX35xswYs5iwoiKCRVFRREDKIo5YE6Yc6zlK2/dbefNfcuy+7zDvj7Q6HRXd1fXqdDj+Mf9/b3QlpeX5fj4WB4fH+Xt7U0+Pj58++YWJ2N2dlbu7u7k/f1dPJKDOBkzMzPy/PysDHkkB1/IeH19jXV7JANfyKBWeCQPnowIwZMRIXgyIgRPRoTgyYgQPBkRgicjQvBkRAiejAjBk5EE8AfZ0tJStbmL/5SMl5cXaWpqkpSUlHjLyMiQ+vp6WV9f93+EjOFbyejq6tIN+T6ysrIira2tkpaWpnt4Qr6ZjL6+vljPJ/hG0t/fL0VFRXJ1dRXr/X2RVDLA1taWpKeny+7urj4jy54olZqaqq26ulr29/d1HBBFpLfKykodJ+0VFhbKyMiIzgeXl5fS3t6u6ZDxrKwsaWtrk/Pzc3WAxsZG/U5j4EtmVVWVrsm5DaY7cyx6g2sXFxfL/Pz8lw9wJycnUlJSoj/X1takoKBAZfkdsAY6kBlo/H50dCS1tbXRIYM9u7u7ZXFxUW5ubuTs7EwPzoGvr69VZnNzU3JycmRyclJlONjCwoJMTEyoQW5vb9WozGM+z+wzPDys8qTI/Px8JcZwcHCga2Jg0wUQsUQuc8Dp6ank5eXp2oeHh7re9PS0zh0cHIwTYmSMjY1JRUWFzM3NqQPh/cyhr6amRvflGTIhLDs7Ozlk4GkY0DV0GDgYh8WgAJ1Yz6IgCNcrwwBBubm5srGxEesRJba5uVnb+Ph4rPeTeGRZC0P39PRIXV2dRpILPB45CAKmc1lZmRrbxejoaGhq5v8NiPRvJ4PD4FGZmZm6x88KuOVSI2N1dVXnMT/sKyTEQnBHR4dGRRBPT0+aDogUYPpNTU2pLowhAyDGnk0P5IKwMSPSyAgaltRISurt7f3hzBaF30IGOdNtKMs/PLi5FuMuLS1pCJPnXXkjg0MQ1synkR4uLi50zIAxSFXk45aWFtne3v5yeIiwuoEsNYeUQeN3+kxvI80MbHq4CDpcItlERRokGvslZNjVlvbw8PCDZ2AY0gQpBu/HqyHHlAwejHUhrry8XI1OfnaJZX3SBoWb8YaGhnikkH7I0dQNiKV4E61WyOkzT0UW/K/ICCvgLiicRMPOzk6s5xOW48OMADC6FVHL2UHQT+GlNgBIgAxyPcXYvJ+1hoaGtM9uQVbosQc14J+kqaDOlqYGBgZiPX8BRyG9RoIMFKcWkCpc4KVumgoDh4cw0lEYTAczgj2TuzGw6wBEAoZlDBlkAVHH/LACTvF1neFnUQTxRHOwsHOh4GYZCTKs8JJOiAaurNy2uIZy5bSDQQ7vFLzJ45EYAE+mRuBdzOV6jDzPtg7GsZQD8GIikWsm6xjQA4IYc29WwK6lEOJeS1k7eLVNRIZFZXANUmLSrrZh4OWOlzyueBCAUVGeWmIH29vbUxnqABGD0To7O+OehmF5tgsAcsgHizjP7OO+0AEMSn1z339cQDB6/d1LXyIyQNhLH+dk319Khse/gycjQvBkRAiejMhA5E95Z8BfReChSwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="YUQDCxyAhUOA1wJPB7VTRQ" IconBase64="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" InformativeScreenshot="72d7036132f86bfb75aa87b6ff2ff821.jpg" Reference="o0vvAy8qH0axIcJS_h2qQw/9Tbh9ytgv0ivFizYeP1CAA" Selector="&lt;html app='chrome.exe' title='Como publicar um livro – Autores de livros na Bubok' /&gt;" Title="Como publicar um livro – Autores de livros na Bubok" Url="https://www.bubok.pt/autores/identificar-me" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+  </Flowchart>
+</Activity>
